@@ -168,6 +168,7 @@
          Lorem ipsum dolor sit amet consectetur adipisicing elit
       </p>
    </footer>
+   <script src="js/jquery-1.9.1.min.js"></script>
    <script src="js/main.js"></script>
 </body>
 </html>
