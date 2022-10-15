@@ -73,11 +73,19 @@ h1, h2, h3, h4, h5, h5 {
 }
 
 .wrapper {
+  opacity: 0;
   font-family: "Nanum Gothic", sans-serif;
-  background: #000;
   font-style: normal;
   font-weight: 700;
   color: #fff;
+  transition: all .5s ease;
+  background: #000;
+}
+
+
+.wrapper.active {
+  background:none;
+  opacity: 1;
 }
 
 .content {
