@@ -199,3 +199,7 @@ btn3.forEach(elem=> {
 });
 
 // Появление сообжения на третьей странице конец
+
+$(document).ready(function(){
+   $('.wrapper').addClass('active');
+});
