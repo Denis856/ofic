@@ -97,6 +97,7 @@ h1, h2, h3, h4, h5, h5 {
 /* mixin end */
 /* page0 start */
 .page0 {
+  overflow: scroll;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   z-index: 40;
