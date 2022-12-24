@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&family=PT+Serif:ital,wght@0,700;1,400&display=swap");
+@font-face {
+  font-family: HkGrotesk;
+  src: url("../fonts/HKGrotesk-Regular.otf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  background-color: #F2F2F2;
+}
+
+.title1 {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: #171717;
+  text-align: center;
+}
+
+.text1 {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 133.3333333333%;
+  color: #666666;
+}
+
+.text10 {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 133.3333333333%;
+  text-transform: uppercase;
+  color: #C9A96E;
+}
+
+.title2 {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 131.25%;
+  text-align: center;
+  color: #171717;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+@media (max-width: 1180px) {
+  .container {
+    width: 100%;
+  }
+}
+
+.header {
+  width: 1760px;
+  margin: 0 auto;
+  padding: 34px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+@media (max-width: 1770px) {
+  .header {
+    width: 100%;
+  }
+  .header > * {
+    margin: 0 10px;
+  }
+}
+@media (max-width: 650px) {
+  .header {
+    padding: 15px 0;
+  }
+}
+.header__logo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 132%;
+  letter-spacing: 2.5px;
+  color: #171717;
+}
+
+.header__burger {
+  cursor: pointer;
+  position: relative;
+  display: none;
+}
+@media (max-width: 650px) {
+  .header__burger {
+    display: block;
+    z-index: 10;
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+}
+.header__burger::before, .header__burger span, .header__burger::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: #343434;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.header__burger::before {
+  top: 8px;
+}
+.header__burger::after {
+  top: -8px;
+}
+.header__burger.active:before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.header__burger.active:after {
+  top: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.header__burger.active span {
+  -webkit-transform: scale(0.1);
+          transform: scale(0.1);
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 650px) {
+  .menu__list {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: -1000px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    padding: 50px 0 0 0;
+    background-color: rgba(255, 255, 255, 0.817);
+  }
+  .menu__list.active {
+    top: 0;
+  }
+}
+.menu__item {
+  margin: 0 33px 0 0;
+}
+.menu__item:last-child {
+  margin: 0 0 0 0;
+}
+@media (max-width: 650px) {
+  .menu__item {
+    margin: 0 0 30px 0;
+  }
+}
+.menu__link {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 135.7142857143%;
+  color: #171717;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.menu__link:hover {
+  color: #C9A96E;
+}
+
+.page1 {
+  width: 1920px;
+  margin: 0 auto;
+  background: url("../img/bg1.jpg") 0 0/cover no-repeat;
+}
+@media (max-width: 1920px) {
+  .page1 {
+    width: 100%;
+  }
+}
+@media (max-width: 1600px) {
+  .page1 {
+    background: url("../img/bg1.jpg") 20% 0/cover no-repeat;
+  }
+}
+@media (max-width: 1400px) {
+  .page1 {
+    background: url("../img/bg1.jpg") 40% 0/cover no-repeat;
+  }
+}
+@media (max-width: 1180px) {
+  .page1 {
+    background: url("../img/bg1.jpg") 50% 0/cover no-repeat;
+  }
+}
+@media (max-width: 550px) {
+  .page1 {
+    background: url("../img/bg1.jpg") 0% 0/cover no-repeat;
+  }
+}
+.page1__body {
+  padding: 490px 0 59px 0;
+  color: #fff;
+  max-width: 560px;
+}
+@media (max-width: 650px) {
+  .page1__body {
+    padding: 250px 0 50px 0;
+  }
+}
+@media (max-width: 550px) {
+  .page1__body {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+.page1__text1 {
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  line-height: 128.5714285714%;
+  text-transform: uppercase;
+  padding: 0 0 5px 0;
+}
+.page1__title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: -3950%;
+  padding: 0 0 10px 0;
+}
+.page1__text2 {
+  font-size: 14px;
+  line-height: 135.7142857143%;
+  margin: 0 14px 0 0;
+}
+.page1__text2:last-child {
+  margin: 0 0 0 0;
+}
+.page1__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 1180px) {
+  .block > * {
+    margin: 0 10px;
+  }
+}
