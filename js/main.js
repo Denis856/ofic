@@ -15,6 +15,7 @@ burger.addEventListener('click', ()=>{
 
 var filterItem = document.querySelectorAll('.page4__choices');
 var choice = document.querySelectorAll('.choive1');
+var choice0 = document.querySelector('.choive0');
 var filterImage = document.querySelectorAll('.page4__item');
 
 window.onload = () => { 
@@ -43,3 +44,11 @@ choice.forEach(item =>{
    item.classList.add('active');
 });
 });
+
+function ret() {
+   choice.forEach(ter => {
+      ter.classList.remove('active');
+   });
+}
+
+choice0.onclick = ret;
