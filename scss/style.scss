@@ -260,6 +260,9 @@ body {
       transition: .3s;
       &:hover {
          color: $color;
+         @media(max-width: $wd3) {
+            color: #fff;
+         }
       }
       @media(max-width: $wd3) {
          font-size: 18px;
