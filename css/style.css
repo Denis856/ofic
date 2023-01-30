@@ -301,7 +301,7 @@ body {
 .menu__link:hover {
   color: #35B8BE;
 }
-@media (max-width: 767px) {
+@media (max-width: 950px) {
   .menu__link:hover {
     color: #fff;
   }

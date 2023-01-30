@@ -260,7 +260,7 @@ body {
       transition: .3s;
       &:hover {
          color: $color;
-         @media(max-width: $wd3) {
+         @media(max-width: $wd2) {
             color: #fff;
          }
       }
