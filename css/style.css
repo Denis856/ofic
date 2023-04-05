@@ -570,7 +570,7 @@ body.active {
 }
 @media (max-width: 950px) {
   .about__title {
-    padding: 0;
+    padding: 0 10px;
     text-align: center;
   }
 }
