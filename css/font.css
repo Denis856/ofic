@@ -1,0 +1,23 @@
+@font-face {
+   font-family: 'Monr reg', sans-serif;
+   src: url('../font/Manrope-Regular.ttf');
+   font-weight: 400;
+}
+
+@font-face {
+   font-family: 'Monr med', sans-serif;
+   src: url('../font/Manrope-Medium.ttf');
+   font-weight: 500;
+}
+
+@font-face {
+   font-family: 'Monr semB', sans-serif;
+   src: url('../font/Manrope-SemiBold.ttff');
+   font-weight: 600;
+}
+
+@font-face {
+   font-family: 'Monr Bold', sans-serif;
+   src: url('../font/Manrope-Bold.ttf');
+   font-weight: 700;
+}
