@@ -269,6 +269,10 @@ body.active {
           transform: rotate(-45deg);
 }
 
+.footer {
+  padding: 60px 0 10px 0;
+  background-position-x: #fff;
+}
 .footer__columns {
   padding: 52px 0 70px 0;
   display: -webkit-box;
