@@ -1,9 +1,13 @@
 var burger = document.querySelector('.header__burger');
+var column = document.querySelectorAll('.footer__block01');
 
 burger.addEventListener('click', ()=> {
    burger.classList.toggle('active');
    document.querySelector('.header__list').classList.toggle('active');
    document.querySelector('body').classList.toggle('active');
+   column.forEach(item => {
+      item.classList.remove('active');
+   });
 });
 
 // next
@@ -16,3 +20,4 @@ $(function(){
    return false;
    });
    });
+

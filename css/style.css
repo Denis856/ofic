@@ -46,6 +46,7 @@ body {
   font-weight: 400;
   line-height: 162.5%;
   color: #333333;
+  background: #F7F6FF;
 }
 body.active {
   overflow: hidden;
@@ -82,10 +83,9 @@ body.active {
 }
 
 .header {
-  padding: 8px 0;
   -webkit-box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.08);
           box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.08);
-  background-color: #fff;
+  background: #F7F6FF;
   z-index: 15;
 }
 @media (max-width: 770px) {
@@ -107,8 +107,7 @@ body.active {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.08);
-          box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.08);
+  padding: 8px 0;
 }
 .header__logo {
   margin-right: 108px;
@@ -159,7 +158,7 @@ body.active {
     width: 100%;
     height: 100vh;
     padding-top: 150px;
-    background-color: rgba(255, 255, 255, 0.847);
+    background-color: rgba(255, 255, 255, 0.91);
     opacity: 0;
     z-index: -1;
   }
@@ -382,13 +381,34 @@ body.active {
   line-height: 257.1428571429%;
   color: #FFFFFF;
 }
+.footer__block01 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media (max-width: 770px) {
+  .footer__block01 {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+  .footer__block01.active {
+    position: static;
+    opacity: 1;
+    z-index: 10;
+  }
+}
 
 .home {
   padding: 82px 0 90px 0;
 }
 @media (max-width: 770px) {
   .home {
-    padding: 90px 0 60px 0;
+    padding: 120px 0 60px 0;
   }
 }
 .home__body, .home__btns {
@@ -530,6 +550,11 @@ body.active {
     padding: 60px 0;
   }
 }
+.about__body {
+  padding: 20px 0 0 0;
+  -webkit-box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.2);
+}
 .about__title {
   padding: 0 0 0 55px;
 }
@@ -552,8 +577,6 @@ body.active {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 0 53px 26px 53px;
-  -webkit-box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.2);
 }
 @media (max-width: 950px) {
   .about__items {
@@ -661,17 +684,12 @@ body.active {
 }
 @media (max-width: 770px) {
   .services__item {
-    width: calc(158px + 62 * (100vw - 400px) / 370);
+    width: 48%;
   }
 }
 @media (max-width: 500px) {
   .services__item {
     margin: 0 0 30px 0;
-  }
-}
-@media (max-width: 400px) {
-  .services__item {
-    width: 158px;
   }
 }
 
@@ -721,12 +739,8 @@ body.active {
 }
 @media (max-width: 770px) {
   .item2__list {
-    padding: 18px 5px 0 5px;
+    padding: 18px 5px 0 10px;
   }
-}
-.item2__price {
-  padding: 0 0 0 16px;
-  border-top: 1px solid #E2E2E2;
 }
 .item2__item {
   display: -webkit-box;
@@ -738,6 +752,17 @@ body.active {
   line-height: 150%;
   color: #333333;
   margin-bottom: 7px;
+  font-size: 16px;
+}
+@media (max-width: 770px) {
+  .item2__item {
+    font-size: calc(12px + 4 * (100vw - 400px) / 370);
+  }
+}
+@media (max-width: 400px) {
+  .item2__item {
+    font-size: 12px;
+  }
 }
 .item2__item:last-child {
   margin-bottom: 0;
@@ -763,11 +788,13 @@ body.active {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   line-height: 150%;
+  padding: 0 0 0 16px;
+  border-top: 1px solid #E2E2E2;
 }
 @media (max-width: 770px) {
   .item2__price {
     font-size: calc(20px + 10 * (100vw - 400px) / 370);
-    padding: 0 5px;
+    padding: 0 5px 0 10px;
   }
 }
 @media (max-width: 400px) {
@@ -839,8 +866,13 @@ body.active {
 }
 @media (max-width: 770px) {
   .consultation__block_text {
-    width: calc(100% - 180 * (100vw - 400px) / 370);
+    width: calc(100% - 180 * (100vw - 500px) / 270);
     font-size: 12px;
+  }
+}
+@media (max-width: 500px) {
+  .consultation__block_text {
+    width: 100%;
   }
 }
 .consultation__img {
@@ -853,8 +885,13 @@ body.active {
 }
 @media (max-width: 770px) {
   .consultation__img {
-    width: calc(100% - 180 * (100vw - 400px) / 370);
+    width: calc(100% - 180 * (100vw - 500px) / 270);
     margin-bottom: 50px;
+  }
+}
+@media (max-width: 500px) {
+  .consultation__img {
+    width: 100%;
   }
 }
 .consultation__form {

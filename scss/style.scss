@@ -39,6 +39,7 @@ body {
    font-weight: 400;
    line-height: 26 / 16 * 100%;
    color: #333333;
+   background: #F7F6FF;
    &.active {
       overflow: hidden;
    }
@@ -80,9 +81,8 @@ $blue: #77B2D3;
 }
 
 .header {
-   padding: 8px 0;
    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.08);
-   background-color: #fff;
+   background: #F7F6FF;
    z-index: 15;
    @media(max-width: $wd3) {
       position: fixed;
@@ -97,7 +97,7 @@ $blue: #77B2D3;
    }
    &__body {
       justify-content: space-between;
-      box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.08);
+      padding: 8px 0;
    }
    &__logo {
       margin-right: 108px;
@@ -134,7 +134,7 @@ $blue: #77B2D3;
          width: 100%;
          height: 100vh;
          padding-top: 150px;
-         background-color: rgba(255, 255, 255, 0.847);
+         background-color: rgba(255, 255, 255, 0.91);
          opacity: 0;
          z-index: -1;
          &.active {
@@ -318,12 +318,26 @@ $blue: #77B2D3;
       line-height: 36 / 14 * 100%;
       color: #FFFFFF;
    }
+   &__block01 {
+      display: flex;
+      flex-direction: column;
+      @media(max-width: $wd3) {
+         position: absolute;
+         opacity: 0;
+         z-index: -1;
+         &.active {
+            position: static;
+            opacity: 1;
+            z-index: 10;
+         }
+      }
+   }
 }
 
 .home {
    padding: 82px 0 90px 0;
    @media(max-width: $wd3) {
-      padding: 90px 0 60px 0;
+      padding: 120px 0 60px 0;
    }
    &__body,
    &__btns {
@@ -425,6 +439,10 @@ $blue: #77B2D3;
    @media(max-width: $wd3) {
       padding: 60px 0;
    }
+   &__body {
+      padding: 20px 0 0 0;
+      box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.2);
+   }
    &__title {
       padding: 0 0 0 55px;
       @media(max-width: $wd2) {
@@ -438,7 +456,6 @@ $blue: #77B2D3;
       justify-content: space-between;
       flex-wrap: wrap;
       padding: 0 53px 26px 53px;
-      box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.2);
       @media(max-width: $wd2) {
          padding: 0 0 26px 0;
          justify-content: center;
@@ -513,13 +530,10 @@ $blue: #77B2D3;
          margin: 0 15px 30px 15px;
       }
       @media(max-width: $wd3) {
-         width: calc(158px + (220 - 158) * ((100vw - 400px) / (770 - 400)));
+         width: 48%;
       }
       @media(max-width: 500px) {
          margin: 0 0 30px 0;
-      }
-      @media(max-width: 400px) {
-         width: 158px;
       }
    }
 }
@@ -557,12 +571,8 @@ $blue: #77B2D3;
    &__list {
       padding: 18px 0 0 16px;
       @media(max-width: $wd3) {
-         padding: 18px 5px 0 5px;
+         padding: 18px 5px 0 10px;
       }
-   }
-   &__price {
-      padding: 0 0 0 16px;
-      border-top: 1px solid #E2E2E2;
    }
    &__item {
       display: flex;
@@ -570,6 +580,13 @@ $blue: #77B2D3;
       line-height: 24 / 16 * 100%;
       color: #333333;
       margin-bottom: 7px;
+      font-size: 16px;
+      @media(max-width: $wd3) {
+         font-size: calc(12px + (16 - 12) * ((100vw - 400px) / (770 - 400)));
+      }
+      @media(max-width: 400px) {
+         font-size: 12px;
+      }
       &:last-child {
          margin-bottom: 0;
       }
@@ -593,9 +610,11 @@ $blue: #77B2D3;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       line-height: 24 / 16 * 100%;
+      padding: 0 0 0 16px;
+      border-top: 1px solid #E2E2E2;
       @media(max-width: $wd3) {
          font-size: calc(20px + (30 - 20) * ((100vw - 400px) / (770 - 400)));
-         padding: 0 5px;
+         padding: 0 5px 0 10px;
       }
       @media(max-width: 400px) {
          font-size: 20px;
@@ -647,8 +666,11 @@ $blue: #77B2D3;
          font-size: calc(12px + (16 - 12) * ((100vw - 770px) / (1190 - 770)));
       }
       @media(max-width: $wd3) {
-         width: calc(100% - (80 + 100) * ((100vw - 400px) / (770 - 400)));
+         width: calc(100% - (80 + 100) * ((100vw - 500px) / (770 - 500)));
          font-size: 12px;
+      }
+      @media(max-width: 500px) {
+         width: 100%;
       }
    }
    &__img {
@@ -658,8 +680,11 @@ $blue: #77B2D3;
       box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.1);
       border-radius: 20px;
       @media(max-width: $wd3) {
-         width: calc(100% - (80 + 100) * ((100vw - 400px) / (770 - 400)));
+         width: calc(100% - (80 + 100) * ((100vw - 500px) / (770 - 500)));
          margin-bottom: 50px;
+      }
+      @media(max-width: 500px) {
+         width: 100%;
       }
    }
    &__form {
